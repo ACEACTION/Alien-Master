@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9485139c04f68045bda1ac2aa6d7ccb, type: 3}
+  m_Name: New Coin Data
+  m_EditorClassIdentifier: 
+  cashAmount: 0
+  magnetSpeed: 30
+  jumpPower: 5
+  magnetSpeedAmount: 30
+  rotateSpeed: 10
+  zAxisForce: 2
+  xAxisForce: 6
+  staticCoin: 0
+  timeToFollow: -17.892303
+  timeToFollowAmount: 0.5
