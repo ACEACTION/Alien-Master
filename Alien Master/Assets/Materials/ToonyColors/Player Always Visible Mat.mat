@@ -135,7 +135,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 0.05045867, g: 1, b: 0, a: 0.64705884}
-    - _Color: {r: 0.05045867, g: 1, b: 0, a: 0.64705884}
+    - _Color: {r: 0.05045864, g: 1, b: 0, a: 0.64705884}
     - _EmissionColor: {r: 1, g: 1, b: 0, a: 1}
     - _HColor: {r: 0.21398653, g: 0.4716981, b: 0.06852971, a: 1}
     - _MatCapColor: {r: 1, g: 1, b: 1, a: 1}
