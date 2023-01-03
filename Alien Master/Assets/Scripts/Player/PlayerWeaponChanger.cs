@@ -44,7 +44,6 @@ public class PlayerWeaponChanger : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.S))
         {
             //pistol chosen
-
             Pistol();
         }
         if (Input.GetKeyDown(KeyCode.W))

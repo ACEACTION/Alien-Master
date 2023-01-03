@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = ("Data/Coin data"))]
 public class CoinData : ScriptableObject
 {
-    public int cashAmount;
+    public int coinAmount;
     public float magnetSpeed;
     public float jumpPower;
     public float magnetSpeedAmount;

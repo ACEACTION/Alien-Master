@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     [Header("Slow Motion")]
     [SerializeField] float slowMotionScale = .2f;
     [SerializeField] float slowMotionDuration = 1;
-
+    public int totalCoin;
 
     public static GameManager Instance;
     private void Awake()
@@ -31,6 +31,6 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
     }
 
-
+    
 
 }
