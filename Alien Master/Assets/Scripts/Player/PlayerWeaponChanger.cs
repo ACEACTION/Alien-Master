@@ -63,6 +63,29 @@ public class PlayerWeaponChanger : MonoBehaviour
 
     }
 
+    public void setWeapon(WeaponName weaponname)
+    {
+        switch(weaponname)
+        {
+            case WeaponName.laser_rifle:
+                Rifle();
+                break;
+            case WeaponName.pistol:
+                Pistol();
+                break;
+            case WeaponName.shotgun:
+                Pistol();
+                break;
+            case WeaponName.axe:
+                Pistol();
+                break;
+            case WeaponName.sword:
+                Pistol();
+                break;
+        }
+
+    }
+
     public void Rifle()
     {
         PlayerProjectilePool.Instance.ProjectilePrefab = PlayerProjectiles[2];
