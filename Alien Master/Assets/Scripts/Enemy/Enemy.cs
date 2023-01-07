@@ -148,7 +148,6 @@ public class Enemy : MonoBehaviour
         SetEnemyPreviousState();
     }
 
-    bool a = true;
     private void PatrollingProcess()
     {
         SetWalkAnimationState(true);
@@ -156,18 +155,11 @@ public class Enemy : MonoBehaviour
         {
             patrollingStandingCd -= Time.deltaTime;
             IdleProcess();
-            if (patrollingStandingCd <= 0 && a)
-            {
-                a = false;
+            if (patrollingStandingCd <= 0)
+            {                
                 patrollingStandingCd = data.maxPatrollingStandingCd;
                 CheckPatrollingPointIndex();
-                Vector3 c = patrollingPoints[patrollingPointsIndex].position;
-                transform.DORotate(c, data.maxIdleRotTime).OnComplete(() =>
-                {
-                    print("CV");
-                    a = true;
-                    SetAgentDst(c);
-                });
+                SetAgentDst(patrollingPoints[patrollingPointsIndex].position);
             }
         }
     }
