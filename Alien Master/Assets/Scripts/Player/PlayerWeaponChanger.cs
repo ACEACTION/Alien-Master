@@ -25,6 +25,14 @@ public class PlayerWeaponChanger : MonoBehaviour
 
     public TextMeshProUGUI fpsText;
     public float deltaTime;
+
+    public static PlayerWeaponChanger Instance;
+    private void Awake()
+    {
+        if (Instance == null) Instance = this;
+    }
+
+
     private void Update()
     {
         deltaTime += (Time.deltaTime - deltaTime) * 0.1f;
@@ -62,7 +70,7 @@ public class PlayerWeaponChanger : MonoBehaviour
 
     }
 
-    public void setWeapon(WeaponName weaponname)
+    public void SetWeapon(WeaponName weaponname)
     {
         switch(weaponname)
         {

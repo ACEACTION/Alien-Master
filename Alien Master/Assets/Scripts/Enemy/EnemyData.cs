@@ -7,6 +7,7 @@ public class EnemyData : ScriptableObject
 {    
     public float maxHp;
     public float damage;
+    public float maxPatrollingStandingCd;    
     public float maxAtckCd;
     public float maxWonderingTime;
     public float maxIdleRotTime;

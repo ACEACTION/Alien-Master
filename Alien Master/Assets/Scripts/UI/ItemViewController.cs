@@ -11,8 +11,11 @@ public class ItemList
 
 public class ItemViewController : MonoBehaviour
 {
+
     public Transform cantBuyTextPoint;
+    public bool closeItemViewAfterBuy;
     [SerializeField] List<ItemList> items;
+    public GameObject itemCanvas;
 
     public static ItemViewController Instance;
     private void Awake()
@@ -37,6 +40,12 @@ public class ItemViewController : MonoBehaviour
     int GetRandomIndex(int length)
     {
         return Random.Range(0, length);
+    }    
+
+
+    public void CloseItemCanvas()
+    {        
+        itemCanvas.SetActive(false);
     }
 
 }

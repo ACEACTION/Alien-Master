@@ -43,12 +43,10 @@ public class Weapon_Item : MonoBehaviour
         priceTxt.text = weaponPrice.ToString();
         btn = GetComponent<Button>();
         btn.onClick.AddListener(SelectItem);
-
     }
 
     void SelectItem()
     {
-        // check amount
         if (CanBuy())
         {
             BuyItem();
@@ -62,7 +60,7 @@ public class Weapon_Item : MonoBehaviour
     private void ShowCantBuyTex()
     {
         var cantBuyText = Instantiate(data.cantBuyTxt,
-                        ItemViewController.Instance.transform.parent);
+                        ItemViewController.Instance.itemCanvas.transform);
         cantBuyText.transform.position = ItemViewController.Instance.cantBuyTextPoint.position;
         cantBuyText.transform.localScale = data.cantBuyTxt.transform.localScale;
         cantBuyText.transform.DOMove(cantBuyText.transform.position + new Vector3(0, 50f, 0), 1f)
@@ -75,11 +73,25 @@ public class Weapon_Item : MonoBehaviour
     void BuyItem()
     {
         GameManager.Instance.totalCoin -= weaponPrice;
+        PlayerWeaponChanger.Instance.SetWeapon(weaponName);
 
-        // select weapon from weapon changer
+        if (ItemViewController.Instance.closeItemViewAfterBuy)
+            ItemViewController.Instance.CloseItemCanvas();
+        else
+        {
+            CloseItem();
+        }
     }
 
-
+    void CloseItem()
+    {
+        btn.onClick.RemoveAllListeners();
+        transform.DOScale(new Vector3(.01f, .01f, .01f), data.scaleDuration)
+        .OnComplete(() =>
+        {
+            Destroy(gameObject);
+        });
+    }
 
     bool CanBuy()
     {

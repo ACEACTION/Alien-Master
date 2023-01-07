@@ -29,6 +29,7 @@ public class Enemy : MonoBehaviour
     float idleRotCd;
     Vector3 dstPos;
     Vector3 originPos;
+    float patrollingStandingCd;
 
     [Header("Wondering")]
     float wonderingCd;
@@ -73,6 +74,7 @@ public class Enemy : MonoBehaviour
         attackingCd = data.maxAtckCd;
         findingPlayerCd = data.maxFindingPlayerTime;
         alertPatrollingCd = data.maxAlertPatrollingTime;
+        patrollingStandingCd = data.maxPatrollingStandingCd;
 
         if (enemyState == EnemyState.patrolling) SetAgentDst(patrollingPoints[0].position);
     }
@@ -146,13 +148,27 @@ public class Enemy : MonoBehaviour
         SetEnemyPreviousState();
     }
 
+    bool a = true;
     private void PatrollingProcess()
     {
         SetWalkAnimationState(true);
         if (ArriveToPoint())
         {
-            CheckPatrollingPointIndex();
-            SetAgentDst(patrollingPoints[patrollingPointsIndex].position);
+            patrollingStandingCd -= Time.deltaTime;
+            IdleProcess();
+            if (patrollingStandingCd <= 0 && a)
+            {
+                a = false;
+                patrollingStandingCd = data.maxPatrollingStandingCd;
+                CheckPatrollingPointIndex();
+                Vector3 c = patrollingPoints[patrollingPointsIndex].position;
+                transform.DORotate(c, data.maxIdleRotTime).OnComplete(() =>
+                {
+                    print("CV");
+                    a = true;
+                    SetAgentDst(c);
+                });
+            }
         }
     }
 

@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHp: 10
   damage: 5
+  maxPatrollingStandingCd: 2
+  patrollingStandingCd: 2
   maxAtckCd: 1
   maxWonderingTime: 1
   maxIdleRotTime: 3
