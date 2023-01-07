@@ -8,7 +8,8 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: PerspectiveFogMaterial
-  m_Shader: {fileID: -6465566751694194690, guid: 4f697f8ea923b894981851ab82a52a36, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 4f697f8ea923b894981851ab82a52a36,
+    type: 3}
   m_ValidKeywords:
   - BOOLEAN_0107A33C3886411D8E1319901D3A8A0D_ON
   - BOOLEAN_6C4164AC_ON
@@ -42,7 +43,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: -21
     m_Colors:
-    - Color_58E0201D: {r: 0.04335061, g: 0.01822711, b: 0.3018868, a: 0.89411765}
+    - Color_58E0201D: {r: 0.10087279, g: 0.80698234, b: 1.2945342, a: 0.6901961}
   m_BuildTextureStacks: []
 --- !u!114 &8126590915005719715
 MonoBehaviour:
