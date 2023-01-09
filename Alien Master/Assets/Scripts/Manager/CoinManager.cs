@@ -45,4 +45,6 @@ public class CoinManager : MonoBehaviour
     {
         totalCoins = SaveLoadSystem.LoadData<int>(cointDataPath);        
     }
+
+
 }

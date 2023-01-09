@@ -1412,25 +1412,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d45b7e160763ae42a32d65111bdf06f, type: 3}
---- !u!1 &666492259 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2542454544672489583, guid: 39bae4f95f08e804e93af4fcec56797a,
-    type: 3}
-  m_PrefabInstance: {fileID: 2542454546115173806}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &666492260
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 666492259}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3595fd09ccd8a1947aabc6cbe21a11b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  totalCoins: 0
 --- !u!1 &692199956
 GameObject:
   m_ObjectHideFlags: 0
@@ -3619,16 +3600,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2542454544672489580, guid: 39bae4f95f08e804e93af4fcec56797a,
-        type: 3}
-      propertyPath: slowMotionScale
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2542454544672489580, guid: 39bae4f95f08e804e93af4fcec56797a,
-        type: 3}
-      propertyPath: slowMotionDuration
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2542454544672489581, guid: 39bae4f95f08e804e93af4fcec56797a,
         type: 3}
       propertyPath: m_RootOrder

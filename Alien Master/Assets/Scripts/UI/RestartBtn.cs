@@ -8,6 +8,6 @@ public class RestartBtn : MonoBehaviour
     public void RestartScene()
     {
         EnemyManager.enemiesList.Clear();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        LevelManager.Instance.RestartLevel();
     }
 }
