@@ -45,11 +45,19 @@ public class PlayerAttacking : MonoBehaviour
 
     private void Update()
     {
+        if (CheckDied())
+            return;
+
         weaponIndex = weaponcChanger.weaponIndex;
         Attacking();
 
         attackCd -= Time.deltaTime;
         activeAnim.runtimeAnimatorController = anims[animIndex];
+    }
+
+    bool CheckDied() 
+    {
+        return PlayerHealth.Instance.died;
     }
 
     private void Attacking()

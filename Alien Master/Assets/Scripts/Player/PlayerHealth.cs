@@ -2,11 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.UI;
+
 public class PlayerHealth : MonoBehaviour
 {
 
     [Header("Health")]
-    public bool takeDmg;
+    [SerializeField] float maxHealth;
+    float currentHealth;
+    [SerializeField] Slider healthbar;
+    [SerializeField] RuntimeAnimatorController diedAnimatorController;
+    [HideInInspector] public bool takeDmg;
+    [HideInInspector] public bool died;
+
 
     [Header("Hit Flash")]
     [SerializeField] float hitFlashDuration;
@@ -19,6 +27,9 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] float scaleTime;
     Vector3 defaultScale;
 
+    [Header("References")]
+    [SerializeField] Animator anim;
+
     public static PlayerHealth Instance;
 
     private void Awake()
@@ -30,8 +41,18 @@ public class PlayerHealth : MonoBehaviour
     private void Start()
     {
         defaultMat = m_Renderer.material;
-        defaultScale = transform.localScale;    
+        defaultScale = transform.localScale;
+        
+        InitHealthBar();
     }
+
+    void InitHealthBar()
+    {
+        currentHealth = maxHealth;
+        healthbar.maxValue = maxHealth;
+        healthbar.value = maxHealth;
+    }
+
 
     private void Update()
     {
@@ -53,9 +74,23 @@ public class PlayerHealth : MonoBehaviour
     
     public void TakeDamage(float dmg)
     {
+        currentHealth -= dmg;
+        healthbar.value = currentHealth;
         HitScale();
         StartCoroutine(HitFlash());
+
+        if (currentHealth <= 0)
+        {
+            Died();
+        }
     }
+
+    void Died()
+    {
+        died = true;
+        anim.runtimeAnimatorController = diedAnimatorController;
+    }
+
 
     void HitScale()
     {
