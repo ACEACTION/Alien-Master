@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Enemy
   - Bullet
+  - Player Weapon
+  - Explosive
   layers:
   - Default
   - TransparentFX
@@ -13,15 +15,15 @@ TagManager:
   - 
   - Water
   - UI
-  - Enemies
-  - Lightning
-  - DeathPulse
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Object
+  - Obstacle
+  - Target
+  - Player Weapon
+  - Player
+  - Ground
+  - Enemy
+  - Dead Enemy
+  - Explosive
   - 
   - 
   - 
