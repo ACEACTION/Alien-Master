@@ -1,16 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class GameManager : MonoBehaviour 
 {
 
     [Header("Slow Motion")]
     [SerializeField] float slowMotionScale = .2f;
-    [SerializeField] float slowMotionDuration = 1;
-    public int totalCoin;
+    [SerializeField] float slowMotionDuration = 1;    
+    
 
     public static GameManager Instance;
+
     private void Awake()
     {
         Application.targetFrameRate = 60;
@@ -18,6 +20,8 @@ public class GameManager : MonoBehaviour
         if (Instance == null)
             Instance = this;
     }
+
+
 
     public void DoSlowMotion()
     {
@@ -31,6 +35,6 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
     }
 
-    
 
+   
 }

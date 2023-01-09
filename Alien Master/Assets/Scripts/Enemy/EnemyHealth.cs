@@ -139,7 +139,6 @@ public class EnemyHealth : MonoBehaviour
                 var coin = PlayerProjectilePool.Instance.coinPool.Get();
                 coin.transform.position = transform.position;
 
-
             }
            // AudioSourceManager.Instance.PlayCoinSfx();
 
