@@ -8,8 +8,9 @@ public class GameManager : MonoBehaviour
 
     [Header("Slow Motion")]
     [SerializeField] float slowMotionScale = .2f;
-    [SerializeField] float slowMotionDuration = 1;    
-    
+    [SerializeField] float slowMotionDuration = 1;
+
+    bool isWin;
 
     public static GameManager Instance;
 
@@ -35,6 +36,15 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
     }
 
+    public void SetIsWin(bool isWin)
+    {
+        this.isWin = isWin;
+        UIController.Instance.ActiveWinLosePanel();
+    }
+    
+    public bool GetIsWin()
+    {
+        return isWin;
+    }
 
-   
 }

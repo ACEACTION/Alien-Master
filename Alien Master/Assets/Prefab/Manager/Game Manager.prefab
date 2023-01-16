@@ -61,6 +61,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3595fd09ccd8a1947aabc6cbe21a11b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinsInLevel: 50
   totalCoins: 0
 --- !u!114 &6179474933991243881
 MonoBehaviour:
@@ -86,3 +87,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50c41c082d142784b8b4962cd04a5691, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelIndex: 0

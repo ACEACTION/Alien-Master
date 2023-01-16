@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CoinManager : MonoBehaviour
 {
+    [SerializeField] int coinsInLevel;
     public int totalCoins;
     const string cointDataPath = "coin.data";
 
@@ -11,6 +12,7 @@ public class CoinManager : MonoBehaviour
 
     private void Awake()
     {
+        coinsInLevel = 0;
         if (Instance == null)
             Instance = this;
     }
@@ -18,6 +20,11 @@ public class CoinManager : MonoBehaviour
     private void Start()
     {
         LoadTotalCoins();
+    }
+
+    public int GetCoinsInLevel()
+    {
+        return coinsInLevel;
     }
 
     public int GetTotalCoins()
@@ -33,6 +40,7 @@ public class CoinManager : MonoBehaviour
 
     public void AddCoins(int coins)
     {
+        coinsInLevel += coins;
         totalCoins += coins;
     }
 
