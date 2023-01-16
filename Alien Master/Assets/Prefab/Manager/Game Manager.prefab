@@ -10,6 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2542454544672489581}
   - component: {fileID: 2542454544672489580}
+  - component: {fileID: 666492260}
+  - component: {fileID: 6179474933991243881}
+  - component: {fileID: 4127912981424833213}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -44,5 +47,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18cd779fe9894f24f91c8f99c15459bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slowMotionScale: 0.2
-  slowMotionDuration: 1
+  slowMotionScale: 0
+  slowMotionDuration: 0
+--- !u!114 &666492260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2542454544672489583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3595fd09ccd8a1947aabc6cbe21a11b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinsInLevel: 50
+  totalCoins: 0
+--- !u!114 &6179474933991243881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2542454544672489583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c63cf9ef1b94afd408f50e0aba9bab78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4127912981424833213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2542454544672489583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50c41c082d142784b8b4962cd04a5691, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelIndex: 0

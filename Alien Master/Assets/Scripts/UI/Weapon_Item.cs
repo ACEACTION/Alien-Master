@@ -72,7 +72,8 @@ public class Weapon_Item : MonoBehaviour
 
     void BuyItem()
     {
-        GameManager.Instance.totalCoin -= weaponPrice;
+        CoinManager.Instance.MinusCoins(weaponPrice);
+        
         PlayerWeaponChanger.Instance.SetWeapon(weaponName);
 
         if (ItemViewController.Instance.closeItemViewAfterBuy)
@@ -95,7 +96,7 @@ public class Weapon_Item : MonoBehaviour
 
     bool CanBuy()
     {
-        return GameManager.Instance.totalCoin >= weaponPrice;
+        return CoinManager.Instance.GetTotalCoins() >= weaponPrice;
     }
 
 

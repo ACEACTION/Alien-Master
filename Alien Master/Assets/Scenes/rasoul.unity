@@ -3600,16 +3600,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2542454544672489580, guid: 39bae4f95f08e804e93af4fcec56797a,
-        type: 3}
-      propertyPath: slowMotionScale
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2542454544672489580, guid: 39bae4f95f08e804e93af4fcec56797a,
-        type: 3}
-      propertyPath: slowMotionDuration
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2542454544672489581, guid: 39bae4f95f08e804e93af4fcec56797a,
         type: 3}
       propertyPath: m_RootOrder

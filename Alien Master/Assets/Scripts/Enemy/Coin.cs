@@ -66,7 +66,7 @@ public class Coin : MonoBehaviour
             PlayerAttacking.Instance.lootEffect.gameObject.SetActive(true);
             PlayerAttacking.Instance.lootEffect.transform.position = other.gameObject.transform.position + new Vector3(0,1f,0);
             PlayerAttacking.Instance.lootEffect.Play();
-            GameManager.Instance.totalCoin += stats.coinAmount;
+            CoinManager.Instance.AddCoins(stats.coinAmount);
             PlayerProjectilePool.Instance.OnReleaseCoin(this.gameObject);
         }
     }
