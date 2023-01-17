@@ -4982,6 +4982,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Alert
       objectReference: {fileID: 0}
+    - target: {fileID: 8982646401163784234, guid: 64e49bec94569b14493f9596c8764b89,
+        type: 3}
+      propertyPath: alertRadius
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64e49bec94569b14493f9596c8764b89, type: 3}
 --- !u!1 &2073172239
