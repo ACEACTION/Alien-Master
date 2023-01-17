@@ -126,6 +126,12 @@ public class EnemyHealth : MonoBehaviour
         GameManager.Instance.DoSlowMotion();
         
         MakeCoin();
+
+        if (EnemyManager.EnemiesListIsEmpty())
+        {
+            EndDoor.instance.MoveDoorUp();
+        }
+
     }
 
     void MakeCoin()

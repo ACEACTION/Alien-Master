@@ -77,7 +77,6 @@ public class PlayerAttacking : MonoBehaviour
                     if (attackCd <= 0)
                     {
                         transform.DOLookAt(closestEnemy.transform.position, 0f);
-                        
                         activeAnim.SetBool("Attacking", true);
                         attackCd = attackCdAmount;
                     }
