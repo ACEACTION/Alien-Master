@@ -13,6 +13,7 @@ public class ItemViewController : MonoBehaviour
 {
 
     public Transform cantBuyTextPoint;
+    [SerializeField] GameObject gameplayPanel;
     public bool closeItemViewAfterBuy;
     [SerializeField] List<ItemList> items;
     public GameObject itemCanvas;
@@ -46,6 +47,7 @@ public class ItemViewController : MonoBehaviour
     public void CloseItemCanvas()
     {        
         itemCanvas.SetActive(false);
+        gameplayPanel.SetActive(true);
     }
 
 }

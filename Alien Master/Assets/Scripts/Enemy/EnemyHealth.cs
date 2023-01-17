@@ -106,7 +106,7 @@ public class EnemyHealth : MonoBehaviour
         // disable game objects
         fowObj.SetActive(false);
 
-        Invoke("ChangeLayer", 1);
+        Invoke("ChangeLayer", 0);
 
         GunProcess();
 
@@ -127,12 +127,9 @@ public class EnemyHealth : MonoBehaviour
         
         MakeCoin();
 
-        if (EnemyManager.EnemiesListIsEmpty())
-        {
-            EndDoor.instance.MoveDoorUp();
-        }
-
     }
+
+
 
     void MakeCoin()
     {
@@ -141,7 +138,6 @@ public class EnemyHealth : MonoBehaviour
             coinGenerator = false;
             for (int i = 0; i < enemy.data.coinCount; i++)
             {
-                print("count");
                 var coin = PlayerProjectilePool.Instance.coinPool.Get();
                 coin.transform.position = transform.position;
 
@@ -161,9 +157,15 @@ public class EnemyHealth : MonoBehaviour
     void ChangeLayer()
     {
         int layer = LayerMask.NameToLayer("Dead Enemy");
-        gameObject.layer = layer;
-        enemyModel.layer = layer;
-        gunObj.layer = layer;
+        Transform[] enemyObjs = GetComponentsInChildren<Transform>();
+        foreach (Transform obj in enemyObjs)
+        {
+            obj.gameObject.layer = layer;
+        }
+                
+        //gameObject.layer = layer;
+        //enemyModel.layer = layer;
+        //gunObj.layer = layer;
     }
 
     void GunProcess()

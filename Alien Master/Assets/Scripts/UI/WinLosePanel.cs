@@ -17,6 +17,7 @@ public class WinLosePanel : MonoBehaviour
         else losePanel.SetActive(true);
     }
 
-    
+    public void NextLevel() => LevelManager.Instance.NextScene();
+    public void Retry() => LevelManager.Instance.RestartLevel();
 
 }

@@ -75,13 +75,7 @@ public class Weapon_Item : MonoBehaviour
         CoinManager.Instance.MinusCoins(weaponPrice);
         
         PlayerWeaponChanger.Instance.SetWeapon(weaponName);
-
-        if (ItemViewController.Instance.closeItemViewAfterBuy)
-            ItemViewController.Instance.CloseItemCanvas();
-        else
-        {
-            CloseItem();
-        }
+        CloseItem();        
     }
 
     void CloseItem()
@@ -90,6 +84,8 @@ public class Weapon_Item : MonoBehaviour
         transform.DOScale(new Vector3(.01f, .01f, .01f), data.scaleDuration)
         .OnComplete(() =>
         {
+            if (ItemViewController.Instance.closeItemViewAfterBuy)
+                ItemViewController.Instance.CloseItemCanvas();
             Destroy(gameObject);
         });
     }

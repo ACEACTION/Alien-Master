@@ -81,6 +81,12 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
+        if (PlayerHealth.Instance.died)
+        {
+            PlayerDied();
+            return;
+        }
+
         Move();
         CheckState();
     }
@@ -122,7 +128,7 @@ public class Enemy : MonoBehaviour
     {        
         agent.SetDestination(dstPos);
     }
-
+    
     void SetIdle()
     {
         IdleProcess();
@@ -142,6 +148,7 @@ public class Enemy : MonoBehaviour
         }
     }
     
+
     void SetPatrolling()
     {
         PatrollingProcess();
@@ -387,6 +394,14 @@ public class Enemy : MonoBehaviour
         previousState = enemyState;        
         originPos = transform.position;
     }
+
+    void PlayerDied()
+    {
+        SetAgentDst(transform.position);
+        SetWalkAnimationState(false);
+        SetFiringAniamtionState(false);
+    }
+
     void RandomIdleRotation()
     {
         idleRotCd -= Time.deltaTime;
@@ -396,6 +411,8 @@ public class Enemy : MonoBehaviour
             idleRotCd = data.maxIdleRotTime;
         }
     }
+
+
 
     // deactive some elements in this sc
     public void DieProcess()
@@ -417,7 +434,7 @@ public class Enemy : MonoBehaviour
     void SetAgentDst(Vector3 pos) => dstPos = pos;
     void SetWalkAnimationState(bool state) => anim.SetBool("walk", state);    
     void SetFiringAniamtionState(bool state) => anim.SetBool("firing", state);    
-    void SetEnemyState(EnemyState state) => enemyState = state;    
+    public void SetEnemyState(EnemyState state) => enemyState = state;    
     void SetWonderingMarkState(bool state) => wonderingMark.SetActive(state);
     bool IsDeadEnemy()
     {
@@ -427,6 +444,11 @@ public class Enemy : MonoBehaviour
     public void RemoveFromManagerList()
     {
         EnemyManager.enemiesList.Remove(this);
+        
+        if (EnemyManager.EnemiesListIsEmpty())
+        {
+            EndDoor.instance.MoveDoorUp();
+        }
     }
 
 }

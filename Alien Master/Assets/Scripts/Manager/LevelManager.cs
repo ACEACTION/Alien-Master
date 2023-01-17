@@ -18,17 +18,17 @@ public class LevelManager : MonoBehaviour
 
     public void NextScene()
     {
-        levelIndex = SceneManager.GetActiveScene().buildIndex + 1;
+        CoinManager.Instance.SaveTotalCoins();
 
-        if (levelIndex >= SceneManager.sceneCount)
+        levelIndex = SceneManager.GetActiveScene().buildIndex + 1;
+        if (levelIndex >= SceneManager.sceneCountInBuildSettings)
         {
             // levels is over
 
         }
         else
         {
-            //SaveLevelIndex();
-
+            SaveLevelIndex();
             SceneManager.LoadScene(levelIndex);
         }
     }

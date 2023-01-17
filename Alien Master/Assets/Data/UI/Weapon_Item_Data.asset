@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Weapon_Item_Data
   m_EditorClassIdentifier: 
   scaleFactor: 1.9
-  scaleDuration: 3
+  scaleDuration: 1
   scaleDelay: 1.5
   cantBuyTxt: {fileID: 6708285422192620070, guid: c7659a9513f3bde40a330335f8f3645c,
     type: 3}

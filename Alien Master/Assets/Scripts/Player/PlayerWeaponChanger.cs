@@ -37,7 +37,7 @@ public class PlayerWeaponChanger : MonoBehaviour
     {
         deltaTime += (Time.deltaTime - deltaTime) * 0.1f;
         float fps = 1.0f / deltaTime;
-        fpsText.text = Mathf.Ceil(fps).ToString();
+        //fpsText.text = Mathf.Ceil(fps).ToString();
 
         if (Input.GetKeyDown(KeyCode.D))
         {
@@ -81,13 +81,13 @@ public class PlayerWeaponChanger : MonoBehaviour
                 Pistol();
                 break;
             case WeaponName.shotgun:
-                Pistol();
+                Shotgun();
                 break;
             case WeaponName.axe:
-                Pistol();
+                Axe();
                 break;
             case WeaponName.sword:
-                Pistol();
+                Sword();
                 break;
         }
 

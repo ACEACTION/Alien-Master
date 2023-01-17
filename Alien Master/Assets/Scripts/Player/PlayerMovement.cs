@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] DynamicJoystick joystick;
+    //[SerializeField] DynamicJoystick joystick;
     public float rotateSpeed;
     public float rotateSpeedDefault;
 
@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Rigidbody rb;
     Vector3 movementDir;
     float xDir, zDir;
+    public bool canMove;
     public static PlayerMovement Instance;
 
     private void Awake()
@@ -35,8 +36,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void Move()
     {
-        xDir = joystick.Horizontal;
-        zDir = joystick.Vertical;
+        if (!canMove) return;
+
+        xDir = DynamicJoystick.Instance.Horizontal;
+        zDir = DynamicJoystick.Instance.Vertical;
 
 
 

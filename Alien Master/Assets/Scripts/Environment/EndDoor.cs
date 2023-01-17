@@ -18,7 +18,6 @@ public class EndDoor : MonoBehaviour
         
     }
 
-
     public void MoveDoorUp()
     {
         transform.DOMoveY(5f, 1f);
