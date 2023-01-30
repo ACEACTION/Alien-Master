@@ -201,7 +201,6 @@ GameObject:
   - component: {fileID: 8738898462653115003}
   - component: {fileID: 2941203535574796537}
   - component: {fileID: 2557710052396729673}
-  - component: {fileID: 6779469172690121394}
   m_Layer: 12
   m_Name: SM_ARA1_Trigger
   m_TagString: Untagged
@@ -274,20 +273,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6779469172690121394
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 36952735399861792}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 8386369810561227624, guid: c7c6542132bab804eb04025939bcd5bb, type: 3}
 --- !u!1 &661524560956832448
 GameObject:
   m_ObjectHideFlags: 0
@@ -1832,7 +1817,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8696288710443372148}
-  m_LocalRotation: {x: -0.078088544, y: -0.000000002043293, z: -0.000000021788107, w: 0.99694645}
+  m_LocalRotation: {x: -0.078088544, y: -0.000000002043293, z: -0.000000021788107,
+    w: 0.99694645}
   m_LocalPosition: {x: 5.773105e-17, y: 0.0012657812, z: 6.0535965e-10}
   m_LocalScale: {x: 1, y: 0.99999994, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2067,11 +2053,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   idleRot: 0
-  wonderingCd: 0
   muzzleEfx: {fileID: 19819752, guid: 71c3d26cf91d1eb4fbc6462a8404cb79, type: 3}
-  findingPlayerCd: 0
-  alertPatrollingCd: 0
-  alertStandingCd: 0
   data: {fileID: 11400000, guid: 2c49efe9d42b4d749a7f36f9c1b5ab1d, type: 2}
   agent: {fileID: 8719441734084109868}
   fow: {fileID: 8719441734084109861}
@@ -2479,11 +2461,13 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: fdac75e990da47649b31f10049c400b0, type: 3}
 --- !u!198 &8719441734638521649 stripped
 ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 19845262, guid: fdac75e990da47649b31f10049c400b0, type: 3}
+  m_CorrespondingSourceObject: {fileID: 19845262, guid: fdac75e990da47649b31f10049c400b0,
+    type: 3}
   m_PrefabInstance: {fileID: 8719441734657285567}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &8719441734656924631 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 493160, guid: fdac75e990da47649b31f10049c400b0, type: 3}
+  m_CorrespondingSourceObject: {fileID: 493160, guid: fdac75e990da47649b31f10049c400b0,
+    type: 3}
   m_PrefabInstance: {fileID: 8719441734657285567}
   m_PrefabAsset: {fileID: 0}

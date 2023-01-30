@@ -108,7 +108,7 @@ public class EnemyHealth : MonoBehaviour
 
         Invoke("ChangeLayer", 0);
 
-        GunProcess();
+        //GunProcess();
 
         // active ragdoll
         SetRigidbodyState(false);
@@ -162,7 +162,9 @@ public class EnemyHealth : MonoBehaviour
         {
             obj.gameObject.layer = layer;
         }
-                
+
+        GunProcess();
+
         //gameObject.layer = layer;
         //enemyModel.layer = layer;
         //gunObj.layer = layer;

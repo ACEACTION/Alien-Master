@@ -3905,7 +3905,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantBuyTextPoint: {fileID: 8961796160070164041}
   gameplayPanel: {fileID: 881586367}
-  closeItemViewAfterBuy: 0
+  closeItemViewAfterBuy: 1
   items:
   - types:
     - {fileID: 5355915993260963796, guid: 7786c05caff5117498bd787aba42c1b7, type: 3}
