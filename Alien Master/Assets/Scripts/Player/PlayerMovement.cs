@@ -52,11 +52,19 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.velocity = movementDir * Time.deltaTime * moveSpeed;
+        if (!canMove) return;
 
-            RotatePlayerFace();
+        rb.velocity = movementDir * Time.deltaTime * moveSpeed;
+        RotatePlayerFace();
         
 
+    }
+
+    public void PlayerIsDied()
+    {
+        canMove = false;
+        movementDir.Set(0, 0, 0);
+        rb.velocity = movementDir;
     }
 
     public void RotatePlayerFace()

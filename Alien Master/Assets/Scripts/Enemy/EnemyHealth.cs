@@ -90,9 +90,7 @@ public class EnemyHealth : MonoBehaviour
     }
 
     void DieProcess()
-
     {
-
 
         AudioSourceManager.Instance.PlayEnemyBloodsSfx();
 
@@ -107,6 +105,7 @@ public class EnemyHealth : MonoBehaviour
         fowObj.SetActive(false);
 
         Invoke("ChangeLayer", 0);
+        //ChangeLayer();
 
         //GunProcess();
 
@@ -156,18 +155,15 @@ public class EnemyHealth : MonoBehaviour
 
     void ChangeLayer()
     {
+        string deadEnemyTag = "Dead Enemy";
         int layer = LayerMask.NameToLayer("Dead Enemy");
         Transform[] enemyObjs = GetComponentsInChildren<Transform>();
         foreach (Transform obj in enemyObjs)
         {
             obj.gameObject.layer = layer;
+            obj.gameObject.tag = deadEnemyTag;
         }
-
         GunProcess();
-
-        //gameObject.layer = layer;
-        //enemyModel.layer = layer;
-        //gunObj.layer = layer;
     }
 
     void GunProcess()
