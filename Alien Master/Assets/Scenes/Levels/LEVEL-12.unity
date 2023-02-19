@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44230115, g: 0.49116117, b: 0.57100403, a: 1}
+  m_IndirectSpecularColor: {r: 0.4448276, g: 0.49438328, b: 0.5735704, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5172,6 +5172,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 331429983, guid: 0d42515e7f0d89842a36cb79d2ca1825, type: 3}
+      propertyPath: canMove
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 331429983, guid: 0d42515e7f0d89842a36cb79d2ca1825, type: 3}
       propertyPath: joystick
       value: 
