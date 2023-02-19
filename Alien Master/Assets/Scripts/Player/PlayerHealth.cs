@@ -88,6 +88,7 @@ public class PlayerHealth : MonoBehaviour
     void Died()
     {
         died = true;
+        PlayerMovement.Instance.PlayerIsDied();        
         anim.runtimeAnimatorController = diedAnimatorController;
         UIController.Instance.ActiveWinLosePanel();             
     }

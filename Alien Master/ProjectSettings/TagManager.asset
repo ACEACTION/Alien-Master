@@ -8,6 +8,7 @@ TagManager:
   - Bullet
   - Player Weapon
   - Explosive
+  - Dead Enemy
   layers:
   - Default
   - TransparentFX
@@ -25,7 +26,7 @@ TagManager:
   - Dead Enemy
   - Explosive
   - Dead Player
-  - 
+  - Explosived Barrel
   - 
   - 
   - 

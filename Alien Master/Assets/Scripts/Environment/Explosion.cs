@@ -9,7 +9,7 @@ public class Explosion : MonoBehaviour
     [SerializeField] float explosionForce = 500f;
     [SerializeField] ParticleSystem explosionEff;
     [SerializeField] GameObject explosionMesh;
-
+    [SerializeField] List<Rigidbody> barrelObjs;
     void Start()
     {
         explosionEff.Stop();
@@ -26,12 +26,14 @@ public class Explosion : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.relativeVelocity.magnitude >= triggerForce 
-            && !collision.gameObject.CompareTag("Player") 
+
+        if (collision.relativeVelocity.magnitude >= triggerForce
+            && !collision.gameObject.CompareTag("Player")
+            && !collision.gameObject.CompareTag("Enemy")
             && !collision.gameObject.CompareTag("Explosive") 
-            && !!collision.gameObject.CompareTag("Enemy")) 
+            )
+             
         {
-            print("BVBV");
             DoExplode();
         }
     }
@@ -59,6 +61,18 @@ public class Explosion : MonoBehaviour
 
         explosionMesh.SetActive(false);
         explosionEff.Play();
+        ThrowBarrelObjs();
     }
+
+    void ThrowBarrelObjs()
+    {
+        int explosivedBarrelLayer = LayerMask.NameToLayer("Explosived Barrel");        
+        foreach (Rigidbody obj in barrelObjs)
+        {
+            obj.isKinematic = false;
+            obj.gameObject.layer = explosivedBarrelLayer;
+        }
+    }
+
 
 }
