@@ -36,12 +36,14 @@ public class CoinManager : MonoBehaviour
     {
         totalCoins -= coins;
         SaveTotalCoins();
+        UIController.Instance.UpdateTotalMoneyUI();
     }
 
     public void AddCoins(int coins)
     {
         coinsInLevel += coins;
         totalCoins += coins;
+        UIController.Instance.UpdateTotalMoneyUI();
     }
 
     public void SaveTotalCoins()

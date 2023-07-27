@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4448276, g: 0.49438328, b: 0.5735704, a: 1}
+  m_IndirectSpecularColor: {r: 0.44230115, g: 0.49116117, b: 0.57100403, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -213,8 +213,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6378321}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 24.9, y: -5, z: 21.8961}
-  m_LocalScale: {x: 86.89, y: 1, z: 98.66612}
+  m_LocalPosition: {x: 24.9, y: -5, z: 153.4224}
+  m_LocalScale: {x: 86.89, y: 1, z: 361.70868}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 510895863}
@@ -235,7 +235,7 @@ PrefabInstance:
     - target: {fileID: 3121705285716667618, guid: 5d20680d62cefd14aa196d8253ab2654,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.372813
+      value: 9.99
       objectReference: {fileID: 0}
     - target: {fileID: 3121705285716667618, guid: 5d20680d62cefd14aa196d8253ab2654,
         type: 3}
@@ -1245,6 +1245,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2281458841741312081, guid: bc300ec1fb1fcaf4e90ee6831439b4a5,
+        type: 3}
+      propertyPath: m_text
+      value: Level 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2586438075373189654, guid: bc300ec1fb1fcaf4e90ee6831439b4a5,
         type: 3}
       propertyPath: m_RootOrder
@@ -1636,6 +1641,14 @@ PrefabInstance:
     - target: {fileID: 331429983, guid: 0d42515e7f0d89842a36cb79d2ca1825, type: 3}
       propertyPath: rotateSpeedDefault
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 718166478, guid: 0d42515e7f0d89842a36cb79d2ca1825, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 718166478, guid: 0d42515e7f0d89842a36cb79d2ca1825, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1762119317, guid: 0d42515e7f0d89842a36cb79d2ca1825, type: 3}
       propertyPath: fpsText
