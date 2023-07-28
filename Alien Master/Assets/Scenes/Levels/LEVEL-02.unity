@@ -1468,6 +1468,21 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 612823084}
+    - target: {fileID: 902588170851837451, guid: bc300ec1fb1fcaf4e90ee6831439b4a5,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.6276
+      objectReference: {fileID: 0}
+    - target: {fileID: 902588170851837451, guid: bc300ec1fb1fcaf4e90ee6831439b4a5,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.6276
+      objectReference: {fileID: 0}
+    - target: {fileID: 902588170851837451, guid: bc300ec1fb1fcaf4e90ee6831439b4a5,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.6276
+      objectReference: {fileID: 0}
     - target: {fileID: 2281458841741312081, guid: bc300ec1fb1fcaf4e90ee6831439b4a5,
         type: 3}
       propertyPath: m_text

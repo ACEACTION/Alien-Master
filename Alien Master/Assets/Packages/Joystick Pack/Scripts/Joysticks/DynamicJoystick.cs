@@ -9,13 +9,7 @@ public class DynamicJoystick : Joystick
 
     [SerializeField] private float moveThreshold = 1;
 
-    public static DynamicJoystick Instance;
-
-    private void Awake()
-    {
-        if (Instance == null)
-            Instance = this;
-    }
+ 
     protected override void Start()
     {
         MoveThreshold = moveThreshold;

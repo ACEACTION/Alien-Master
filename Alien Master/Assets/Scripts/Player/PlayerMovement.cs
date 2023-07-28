@@ -38,8 +38,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if (!canMove) return;
 
-        xDir = DynamicJoystick.Instance.Horizontal;
-        zDir = DynamicJoystick.Instance.Vertical;
+        xDir = Joystick.Instance.Horizontal;
+        zDir = Joystick.Instance.Vertical;
 
 
 

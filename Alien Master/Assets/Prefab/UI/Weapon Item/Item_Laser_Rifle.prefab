@@ -233,7 +233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e289cf48d9d50964881fc4dad59fe991, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponPrice: 1500
+  weaponPrice: 1200
   weaponName: 4
   priceTxt: {fileID: 4215418770397843587}
   data: {fileID: 11400000, guid: e09897c7c3296df43b138a2fae5f2414, type: 2}
