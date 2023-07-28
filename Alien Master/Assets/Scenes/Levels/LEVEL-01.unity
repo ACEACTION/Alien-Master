@@ -3360,6 +3360,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 331429981, guid: 0d42515e7f0d89842a36cb79d2ca1825, type: 3}
+      propertyPath: attackCdAmount
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 331429983, guid: 0d42515e7f0d89842a36cb79d2ca1825, type: 3}
       propertyPath: joystick
       value: 

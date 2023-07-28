@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce3b20b83dd5aff4b9a246dd6a976fc1, type: 3}
   m_Name: Axe
   m_EditorClassIdentifier: 
-  hitEffect: {fileID: 8410066728115209643, guid: 4f0ce764558c62b46bf5ae1c0688eb7b, type: 3}
+  hitEffect: {fileID: 8410066728115209643, guid: 4f0ce764558c62b46bf5ae1c0688eb7b,
+    type: 3}
   muzzleEffect: {fileID: 0}
-  damage: 100
-  defaultDamage: 100
+  damage: 500
+  defaultDamage: 500
   speed: 0
   range: 4
   pushAmount: 5000

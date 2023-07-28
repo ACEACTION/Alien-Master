@@ -10365,10 +10365,10 @@ MonoBehaviour:
   - {fileID: 9100000, guid: 163f0d897b9621d4f8a43ac1f2784c56, type: 2}
   - {fileID: 9100000, guid: 0b2f58b912605c84eb7c05cac397f567, type: 2}
   attackCd: 0
+  attackCdAmount: 1
   layermask:
     serializedVersion: 2
     m_Bits: 5623
-  attackCdAmount: 2
   lootEffect: {fileID: 632624259}
   offset: 1
   shotgunBulletCounter: 5
@@ -10390,7 +10390,7 @@ MonoBehaviour:
   pushAmount: 700
   attackRange: 10
   animIndex: 0
-  damage: 100
+  damage: 1000
   weaponIndex: 4
   canDealDmg: 0
 --- !u!114 &331429983
@@ -10405,13 +10405,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cd35e81f50395248aa95382c103c4a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joystick: {fileID: 0}
   rotateSpeed: 10
   rotateSpeedDefault: 10
   moveSpeed: 500
   moveSpeedDefault: 500
   anim: {fileID: 331429978}
   rb: {fileID: 331429982}
+  canMove: 0
 --- !u!114 &1762119317
 MonoBehaviour:
   m_ObjectHideFlags: 0

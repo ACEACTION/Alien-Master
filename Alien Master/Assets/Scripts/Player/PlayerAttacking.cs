@@ -10,8 +10,8 @@ public class PlayerAttacking : MonoBehaviour
     
     [SerializeField] RuntimeAnimatorController[] anims;
     [SerializeField] float attackCd;
-    [SerializeField] LayerMask layermask;
     [SerializeField] float attackCdAmount;
+    [SerializeField] LayerMask layermask;
     public ParticleSystem lootEffect;
     [SerializeField] float offset;
     [SerializeField] int shotgunBulletCounter;

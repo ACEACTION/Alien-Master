@@ -3051,7 +3051,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinText: {fileID: 1841393425}
-  finishGamePanel: {fileID: 0}
+  finishGamePanel: {fileID: 2609754487857289737}
   winPanel: {fileID: 1269336136}
   losePanel: {fileID: 877272850859420908}
 --- !u!1 &604030052342638931
@@ -4188,7 +4188,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 6546
+  m_text: 4000
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e39428b3fca40c546891ebd045006649, type: 2}
   m_sharedMaterial: {fileID: -4852055450268832060, guid: e39428b3fca40c546891ebd045006649,
@@ -4216,10 +4216,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 42.7
+  m_fontSize: 45.3
   m_fontSizeBase: 42.7
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
