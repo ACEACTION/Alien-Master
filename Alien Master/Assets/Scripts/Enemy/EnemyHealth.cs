@@ -34,7 +34,7 @@ public class EnemyHealth : MonoBehaviour
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.LeftControl))
-            CameraShake.Instance.ShakeCamera(.2f, 1, 1f);
+            HitBlood();
     }
 
     void SetRigidbodyState(bool state)
@@ -86,9 +86,8 @@ public class EnemyHealth : MonoBehaviour
         //blood.transform.localPosition = new Vector3(0, 1, 0);
         blood.transform.position = transform.position;
         blood.bloodEff.Play();
-
     }
-
+    
     void PushBackEnemy()
     {
         pushBackDir = (PlayerAttacking.Instance.gameObject.transform.position - transform.position);

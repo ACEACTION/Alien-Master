@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitEffect: {fileID: 151354, guid: d7ec8a0e9224de84386e9f3d80202f7d, type: 3}
   muzzleEffect: {fileID: 0}
-  damage: 5
-  defaultDamage: 5
+  damage: 500
+  defaultDamage: 500
   speed: 40
   range: 7
   pushAmount: 400
