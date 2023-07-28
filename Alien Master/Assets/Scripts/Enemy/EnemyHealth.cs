@@ -60,7 +60,7 @@ public class EnemyHealth : MonoBehaviour
     public void MinusHp(float dmg)
     {
         currentHp -= dmg;
-
+        PlayerAttacking.Instance.canDealDmg = false;
         // spawn blood
         HitBlood();
 
@@ -79,7 +79,13 @@ public class EnemyHealth : MonoBehaviour
         //var blood = Instantiate(enemy.data.bloodEff, transform.position, Quaternion.identity);
         //Destroy(blood, 3);
 
-        bloodEff.Play();
+        //bloodEff.Play();
+
+        EnemyHitBlood blood = EnemyHitBloodPool.Instance.pool.Get();
+        //blood.transform.SetParent(transform);
+        //blood.transform.localPosition = new Vector3(0, 1, 0);
+        blood.transform.position = transform.position;
+        blood.bloodEff.Play();
 
     }
 
@@ -184,9 +190,17 @@ public class EnemyHealth : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player Weapon") && PlayerAttacking.Instance.canDealDmg)
         {
-            MinusHp(PlayerAttacking.Instance.damage);
-            PlayerAttacking.Instance.canDealDmg = false;
+            //MinusHp(PlayerAttacking.Instance.damage);
+            //PlayerAttacking.Instance.canDealDmg = false;
         }
+
+        if (collision.gameObject.CompareTag("Player Weapon"))
+        {
+            //PlayerProjectilePool.Instance.projectilePool.Release()
+            PlayerProjectilePool.Instance.onReleaseProjectile(collision.gameObject.GetComponent<PlayerProjectile>());
+
+        }
+
     }
 
     IEnumerator DisableColWithDelay()

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4556325168818908099}
   - component: {fileID: 3004281545931375580}
+  - component: {fileID: 5397079773951360720}
   m_Layer: 0
   m_Name: Enemy Hit Pool
   m_TagString: Untagged
@@ -45,3 +46,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitPrefab: {fileID: 119212, guid: 685804666097ffc4a92177383378ddc8, type: 3}
+--- !u!114 &5397079773951360720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1657909428211387344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25a3a01c70826cd4f910adcb280e3005, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitPrefab: {fileID: -1346288796982862380, guid: fdac75e990da47649b31f10049c400b0,
+    type: 3}

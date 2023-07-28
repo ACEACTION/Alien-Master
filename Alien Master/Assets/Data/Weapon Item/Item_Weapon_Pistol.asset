@@ -9,9 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54a4021a31caceb4fa10fb6e529c480a, type: 3}
+  m_Script: {fileID: 0}
   m_Name: Item_Weapon_Pistol
   m_EditorClassIdentifier: 
-  weaponName: 2
-  weaponIcon: {fileID: 0}
-  weaponPrice: 50

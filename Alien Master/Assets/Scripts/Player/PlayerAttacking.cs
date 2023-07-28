@@ -119,6 +119,8 @@ public class PlayerAttacking : MonoBehaviour
                 projectile.transform.position = bulletSpawnPoint[weaponIndex].position;
                 projectile.direction = (closestEnemy.transform.position - transform.position).normalized;
 
+                closestEnemy.GetComponent<EnemyHealth>().MinusHp(damage);
+
                 if (weaponIndex == 2)
                 {
                     AudioSourceManager.Instance.PlayPistolSfx();
@@ -138,6 +140,7 @@ public class PlayerAttacking : MonoBehaviour
                     projectile.transform.position = bulletSpawnPoint[weaponIndex].position;
                     projectile.direction = ((closestEnemy.transform.position - transform.position) + new Vector3(Random.Range(-offset, offset), Random.Range(-offset, offset), Random.Range(0, offset))).normalized;
                 }
+                closestEnemy.GetComponent<EnemyHealth>().MinusHp(damage);
                 AudioSourceManager.Instance.PlayShotGunSfx();
             }                   
         }

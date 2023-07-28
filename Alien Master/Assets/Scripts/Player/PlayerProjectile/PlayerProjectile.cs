@@ -27,10 +27,9 @@ public class PlayerProjectile : MonoBehaviour
             {
                 CameraShake.Instance.ShakeCamera(0.2f, 1f, 0.5f);
                 PlayerProjectilePool.Instance.hitEffect = stats.hitEffect;
-                var hit = PlayerProjectilePool.Instance.hitEffectPool.Get();
-                hit.transform.position = transform.position;
+                //var hit = PlayerProjectilePool.Instance.hitEffectPool.Get();
+                //hit.transform.position = transform.position;
                 PlayerProjectilePool.Instance.onReleaseProjectile(this);
-
                 PlayerAttacking.Instance.canDealDmg = true;
             }
         }
